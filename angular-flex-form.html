@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="flexFormApp">
+<head>
+	<title>test</title>
+    <!-- // <script src="libraries/jquery/jquery.min.js"></script> -->
+    <!-- <link rel='stylesheet', type='text/css', href='libraries/bootstrap/dist/css/bootstrap.min.css'> -->
+    <link rel='stylesheet', href='bower_components/font-awesome/css/font-awesome.min.css'>
+    <link rel='stylesheet', href='bower_components/angular-flex-form/css/form.css'>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-flex-form/flex-form.js"></script>
+    <script>
+
+    var ff = angular.module('flexFormApp',["flexForm"]);
+
+   ff.controller('indexCtrl', function($scope) {
+       	$scope.inputMeta = [
+			{key:"Tag",value:""},
+       		{key:"Cell", value:"No data"},
+       		{key:"Perturbation", value:"No data"},
+       		{key:"Gene", value:"No data"}
+       	];
+       	$scope.print = function(){
+       		console.log($scope.inputMeta);
+       	}
+  	});
+
+    </script>
+</head>
+
+<body ng-controller="indexCtrl">
+<flex-form data="inputMeta"></flex-form>
+<p>
+<button ng-click="print()">console.log</button>
+</p>
+<p>
+<a href="https://github.com/frlender/angular-flex-form"> source</a>
+</p>
+<p>
+bower install angular-flex-form --save
+</p>
+</body>
+	<script>
+    </script>
+</html>
