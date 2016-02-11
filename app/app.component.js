@@ -1,4 +1,5 @@
 System.register(['angular2/core', './hero.service', './heroes.component', './dashboard.component', './hero-detail.component', 'angular2/router'], function(exports_1) {
+    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,6 +39,7 @@ System.register(['angular2/core', './hero.service', './heroes.component', './das
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
+                        styleUrls: ['app/app.component.css'],
                         template: "\n    <h1>{{title}}</h1>\n    <nav>\n    <a [routerLink]=\"['Dashboard']\">Dashboard</a>\n    <a [routerLink]=\"['Heroes']\">Heroes</a>\n  </nav>\n    <router-outlet></router-outlet>\n  ",
                         directives: [router_1.ROUTER_DIRECTIVES],
                         providers: [
@@ -66,7 +68,7 @@ System.register(['angular2/core', './hero.service', './heroes.component', './das
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
-            })();
+            }());
             exports_1("AppComponent", AppComponent);
         }
     }

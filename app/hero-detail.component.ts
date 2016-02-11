@@ -14,6 +14,7 @@ import {Hero} from './hero';
       <label>name: </label>
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </div>
+		<button (click)="goBack()">Back</button>
   </div>
 `,
 	inputs: ['hero']
@@ -25,8 +26,14 @@ export class HeroDetailComponent {
 		private _routeParams: RouteParams) {
 	}
 
+	goBack() {
+  	window.history.back();
+	}
+
 	ngOnInit() {
+		console.log('bb');
 		let id = +this._routeParams.get('id');
+		console.log('aa',id);
 		this._heroService.getHero(id)
 			.then(hero => this.hero = hero);
 	}

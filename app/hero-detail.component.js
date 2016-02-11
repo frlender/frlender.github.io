@@ -1,4 +1,5 @@
 System.register(['angular2/router', './hero.service', 'angular2/core'], function(exports_1) {
+    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -27,22 +28,27 @@ System.register(['angular2/router', './hero.service', 'angular2/core'], function
                     this._heroService = _heroService;
                     this._routeParams = _routeParams;
                 }
+                HeroDetailComponent.prototype.goBack = function () {
+                    window.history.back();
+                };
                 HeroDetailComponent.prototype.ngOnInit = function () {
                     var _this = this;
+                    console.log('bb');
                     var id = +this._routeParams.get('id');
+                    console.log('aa', id);
                     this._heroService.getHero(id)
                         .then(function (hero) { return _this.hero = hero; });
                 };
                 HeroDetailComponent = __decorate([
                     core_1.Component({
                         selector: 'my-hero-detail',
-                        template: "\n  <div *ngIf=\"hero\">\n    <h2>{{hero.name}} details!</h2>\n    <div><label>id: </label>{{hero.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n    </div>\n  </div>\n",
+                        template: "\n  <div *ngIf=\"hero\">\n    <h2>{{hero.name}} details!</h2>\n    <div><label>id: </label>{{hero.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n    </div>\n\t\t<button (click)=\"goBack()\">Back</button>\n  </div>\n",
                         inputs: ['hero']
                     }), 
                     __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.RouteParams])
                 ], HeroDetailComponent);
                 return HeroDetailComponent;
-            })();
+            }());
             exports_1("HeroDetailComponent", HeroDetailComponent);
         }
     }
