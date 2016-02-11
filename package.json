@@ -5,7 +5,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
-    "jade:w":"jade -P -w views/*.jade --out ./",
+    "jade:w":"jade -P -w views/ --out ./",
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" \"npm run jade:w\" "
   },
   "license": "ISC",
