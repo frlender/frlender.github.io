@@ -11,14 +11,8 @@ html
     script(src='node_modules/angular2/bundles/angular2-polyfills.js')
     script(src='node_modules/systemjs/dist/system.src.js')
     script(src='node_modules/rxjs/bundles/Rx.js')
-<<<<<<< HEAD
     script(src='node_modules/angular2/bundles/angular2.dev.js')
     script(src='bundle.js')
-
-=======
-    //- script(src='node_modules/angular2/bundles/angular2.dev.js')
-    //- script(src='node_modules/angular2/bundles/router.dev.js')
->>>>>>> master
     // 2. Configure SystemJS
     if dev
       script var mainFile = 'app/main.js';
@@ -26,21 +20,8 @@ html
       script var mainFile = 'main-min.js';
     script.
       System.config({
-<<<<<<< HEAD
         format: 'register',
         defaultExtension: 'js'
-=======
-        bundles:{
-          'node_modules/angular2/bundles/angular2.dev.js':['angular2/core','angular2/platform/browser'],
-          'node_modules/angular2/bundles/router.dev.js':['angular2/router']
-        },
-        packages: {
-          app: {
-            format: 'register',
-            defaultExtension: 'js'
-          }
-        }
->>>>>>> master
       });
       System.import(mainFile)
       .then(null, console.error.bind(console));
