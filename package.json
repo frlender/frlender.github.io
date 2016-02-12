@@ -26,5 +26,9 @@
     "glob": "^7.0.0",
     "lite-server": "^2.0.1",
     "typescript": "^1.7.5"
+  },
+  "jspm": {
+    "dependencies": {},
+    "devDependencies": {}
   }
 }
