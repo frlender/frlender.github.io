@@ -10,17 +10,19 @@ html
     script(src='node_modules/systemjs/dist/system.src.js')
     script(src='node_modules/rxjs/bundles/Rx.js')
     script(src='node_modules/angular2/bundles/angular2.dev.js')
+    script(src='bundle.js')
+
     // 2. Configure SystemJS
+    if dev
+      script var mainFile = 'app/main.js';
+    else
+      script var mainFile = 'main-min.js';
     script.
       System.config({
-      packages: {
-      app: {
-      format: 'register',
-      defaultExtension: 'js'
-      }
-      }
+        format: 'register',
+        defaultExtension: 'js'
       });
-      System.import('app/main')
+      System.import(mainFile)
       .then(null, console.error.bind(console));
   // 3. Display the application
   body
