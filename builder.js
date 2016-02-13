@@ -6,10 +6,10 @@ var Builder = require('systemjs-builder');
 var builder = new Builder('./');
 builder.config({
 packages: {
-app: {
-format: 'register',
-defaultExtension: 'js'
-}
+  app: {
+    format: 'register',
+    defaultExtension: 'js'
+  }
 }
 });
 
