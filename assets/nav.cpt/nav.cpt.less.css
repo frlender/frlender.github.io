@@ -1,0 +1,19 @@
+.host {
+  width: 100%;
+  color: white;
+}
+.name {
+  float: left;
+  width: 200px;
+}
+.titles {
+  margin-left: 200px;
+}
+.title {
+  margin-left: 50px;
+  min-width: 30px;
+  text-align: center;
+  display: inline-block;
+  padding-left: 6px;
+  padding-right: 6px;
+}

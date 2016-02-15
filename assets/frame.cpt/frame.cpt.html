@@ -1,0 +1,9 @@
+
+<div class="frame">
+  <fl-nav [titles]="titles.slice(1,titles.length)" (titleHover)="setCurrentTitle($event)" (titleLeave)="setCurrentTitle(titles[0])"></fl-nav>
+  <fl-canvas [title]="titles[0]" class="canvas" *ngIf="currentTitle.text==titles[0].text"></fl-canvas>
+  <fl-canvas [title]="titles[1]" class="canvas" *ngIf="currentTitle.text==titles[1].text"></fl-canvas>
+  <fl-canvas [title]="titles[2]" class="canvas" *ngIf="currentTitle.text==titles[2].text"></fl-canvas>
+  <fl-canvas [title]="titles[3]" class="canvas" *ngIf="currentTitle.text==titles[3].text"></fl-canvas>
+  <fl-footer></fl-footer>
+</div>

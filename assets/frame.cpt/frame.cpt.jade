@@ -1,0 +1,7 @@
+.frame
+  fl-nav([titles]="titles.slice(1,titles.length)")&attributes({'(titleHover)':"setCurrentTitle($event)",'(titleLeave)':"setCurrentTitle(titles[0])"})
+  fl-canvas([title]="titles[0]")&attributes({'*ngIf':"currentTitle.text==titles[0].text"}).canvas
+  fl-canvas([title]="titles[1]")&attributes({'*ngIf':"currentTitle.text==titles[1].text"}).canvas
+  fl-canvas([title]="titles[2]")&attributes({'*ngIf':"currentTitle.text==titles[2].text"}).canvas
+  fl-canvas([title]="titles[3]")&attributes({'*ngIf':"currentTitle.text==titles[3].text"}).canvas
+  fl-footer
